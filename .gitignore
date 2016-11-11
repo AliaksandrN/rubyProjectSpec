@@ -1,5 +1,9 @@
 *.gem
 *.rbc
+.Gemfile.lock.swp
+.rspec.md.swp
+..rspec.swp
+.ruby.md.swp
 /.config
 /coverage/
 /InstalledFiles

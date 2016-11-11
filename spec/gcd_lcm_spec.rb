@@ -15,11 +15,14 @@ RSpec.describe 'gcd_lcm.rb' do
 
     it 'return the correct result' do
       expect(lcm(4, 16)).to equal(16)
+      expect(lcm(0, 16)).to equal(0)
     end
 
     it 'returns a positive number' do
-      b = (lcm(7, 14) > 0)
-      expect(b).to eq(true)
+      a = (lcm(-7, 14) > 0)
+      b = (lcm(7, -14) > 0)
+      c = (lcm(-7, -14) > 0)
+      expect(a && b && c).to eq(true)
     end
   end
 end

@@ -21,5 +21,14 @@ RSpec.describe 'bubblesort.rb' do
     it 'returns the correct type' do
       expect(bubblesort([4, 3, 2, 1])).to be_an_instance_of Array
     end
+
+    it 'correct argument' do
+      arr = bubblesort([5.8, 7, 6, 4, 5, 1, 2, 3])
+      i = 0
+      arr.each do |x|
+        i += 1 if x.instance_of?(Numeric) != true
+      end
+      expect(i.zero?)
+    end
   end
 end
