@@ -5,6 +5,7 @@ def gcd(a, b)
 end
 
 def lcm(a, b)
+  return nil if a.kind_of?(Integer) == false || b.kind_of?(Integer) == false 
   l = a.zero? || b.zero? ? 0 : a * b / gcd(a, b)
   l.abs
 end
